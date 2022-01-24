@@ -1,1 +1,1 @@
-# 2ndSEM
+# 2nd Semester Project
