@@ -49,9 +49,9 @@ float polyval(vector<int> a,float x){
 int main()
 {
     cout<<"1. Roots from equation"<<endl<<"2. Equation from roots"<<endl;
-    char ch=getchar();
+    char ch=getchar(); int n=0;
 	if(ch=='1'){
-        int n=0,a=0;
+        int a=0;
         vector<int> arr;
         cout<<"Enter degree of polynomial : "; cin>>n;
         cout<<"Enter the coefficients of the polynomial in increasing sequence of their exponents :"<<endl;
@@ -90,7 +90,6 @@ int main()
         } else cout<<"Degree must be more than 1"<<endl;
 	}
 	else if(ch=='2'){
-        int n; char ch;
         cout<<"Enter number of Roots = "; cin>>n;
         float arr[n]={0};
         cout<<"Enter the Roots : ";
