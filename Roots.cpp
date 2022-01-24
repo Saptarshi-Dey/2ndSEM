@@ -54,6 +54,7 @@ int main()
         int a=0;
         vector<int> arr;
         cout<<"Enter degree of polynomial : "; cin>>n;
+        if(n>1){
         cout<<"Enter the coefficients of the polynomial in increasing sequence of their exponents :"<<endl;
         for(int i=0;i<n+1;i++){ cin>>a; arr.push_back(a); }
         if(n==2){
@@ -87,7 +88,7 @@ int main()
             }
             cout<<"The roots are : "; for(float e:factors) cout<<e<<" "; cout<<endl;
             } else cout<<"Couldn't determine roots :("<<endl;
-        } else cout<<"Degree must be more than 1"<<endl;
+        }}else cout<<"Degree must be more than 1"<<endl;
 	}
 	else if(ch=='2'){
         cout<<"Enter number of Roots = "; cin>>n;
