@@ -66,8 +66,8 @@ int main()
                 cout<<"The roots are "<<real<<"+"<<img<<"i and "<<real<<"-"<<img<<endl;
             }
             else if(d>0){
-                float r1=float(arr[1]*(-1))/float(2*arr[0])+sqrt(d)/float(2*arr[0]);
-                float r2=float(arr[1]*(-1))/float(2*arr[0])-sqrt(d)/float(2*arr[0]);
+                float r1=float(arr[1]*(-1))/float(2*arr[0])-sqrt(d)/float(2*arr[0]);
+                float r2=float(arr[1]*(-1))/float(2*arr[0])+sqrt(d)/float(2*arr[0]);
                 cout<<"The roots are "<<r1<<" and "<<r2<<endl;
             }
         }
@@ -86,7 +86,8 @@ int main()
                     }
                 }
             }
-            cout<<"The roots are : "; for(float e:factors) cout<<e<<" "; cout<<endl;
+            if(factors.size()==0) cout<<"No roots found"<<endl;
+            else { cout<<"The roots are : "; for(float e:factors) cout<<e<<" "; cout<<endl; }
             } else cout<<"Couldn't determine roots :("<<endl;
         }}else cout<<"Degree must be more than 1"<<endl;
 	}
