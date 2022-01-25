@@ -36,7 +36,7 @@ void sumCombination(float arr[], int n, int r,float &x){
 
 vector<int> Factorizer(int n){
     vector<int> arr;
-    for(int i=1;i<=n/2;i++) if(n%i==0) arr.push_back(i);
+    for(int i=1;i<=n/2;i++) if(n%i==0) arr.push_back(i); arr.push_back(n);
     return arr;
 }
 
