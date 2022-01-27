@@ -55,7 +55,7 @@ int main()
         vector<int> arr;
         cout<<"Enter degree of polynomial : "; cin>>n;
         if(n>1){
-        cout<<"Enter the coefficients of the polynomial in increasing sequence of their exponents :"<<endl;
+        cout<<"Enter the coefficients of the polynomial in decreasing sequence of their exponents :"<<endl;
         for(int i=0;i<n+1;i++){ cin>>a; arr.push_back(a); }
         if(n==2){
             float d=arr[1]*arr[1]-4*arr[0]*arr[2];
@@ -86,8 +86,8 @@ int main()
                 for(int i:factor1){
                     if(factors.size()==arr.size()-1) break;
                     else{
-                        if(!polyval(arr,i)) factors.push_back(i);
-                        if(!polyval(arr,i*(-1.0))) factors.push_back(i*(-1));
+                        if(!polyval(arr2,i)) factors.push_back(i);
+                        if(!polyval(arr2,i*(-1.0))) factors.push_back(i*(-1));
                     }
                 }
             }
