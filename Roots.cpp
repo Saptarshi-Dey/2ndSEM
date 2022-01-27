@@ -75,7 +75,22 @@ int main()
             if(arr[arr.size()-1]%arr[0]==0){
             a=arr[arr.size()-1]/arr[0];
             vector<float> factors;
-            if(a==0) factors.push_back(0);
+            if(a==0){
+                factors.push_back(0);
+                auto index=arr.size();
+                while (!arr[index]) index--; index++;
+                vector<int> arr2(index);
+                copy(arr.begin(),arr.begin()+index,arr2.begin());
+                a=arr2[arr2.size()-1]/arr2[0];
+                vector<int> factor1=Factorizer(MOD(a));
+                for(int i:factor1){
+                    if(factors.size()==arr.size()-1) break;
+                    else{
+                        if(!polyval(arr,i)) factors.push_back(i);
+                        if(!polyval(arr,i*(-1.0))) factors.push_back(i*(-1));
+                    }
+                }
+            }
             else{
                 vector<int> factor1=Factorizer(MOD(a));
                 for(int i:factor1){
