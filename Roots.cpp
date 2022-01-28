@@ -63,7 +63,7 @@ int main()
             else if(d<0){
                 float real=float(arr[1]*(-1))/float(2*arr[0]);
                 float img=sqrt(d*(-1))/float(2*arr[0]);
-                cout<<"The roots are "<<real<<"+"<<img<<"i and "<<real<<"-"<<img<<endl;
+                cout<<"The roots are "<<real<<"+"<<img<<"i and "<<real<<"-"<<img<<"i"<<endl;
             }
             else if(d>0){
                 float r1=float(arr[1]*(-1))/float(2*arr[0])-sqrt(d)/float(2*arr[0]);
